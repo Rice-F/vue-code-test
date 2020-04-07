@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{name}}</p>
+        <p s-text="name"></p>
+        <p>{{age}}</p>
+    </div>
+
+    <script src="svue.js"></script>
+    <script src="compile.js"></script>
+    <script>
+        const app = new SVue({
+            el: 'app',
+            data: {
+                test: 'I am test',
+                foo: {
+                    bar: 'bar'
+                },
+                name: 'Asher',
+                age: 3,
+            }
+        })
+        app.$data.test = 'hello, SVue'
+        app.$data.foo.bar = 'oh bar'
+    </script>
+</body>
+</html>
